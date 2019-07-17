@@ -1,6 +1,7 @@
 import React from "react";
 
-import logo from "../img/Lambda_Logo_white.png";
+import logo from "../src/img/Lambda_Logo_white.png";
+// import logo from "/Users/scottrenz/Documents/GitHub/nasa-photo-of-the-day/img/Lambda_Logo_white.png";
 const logoColor = {
   color: 'white',
   backgroundColor: 'darkred'
