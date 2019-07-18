@@ -9,6 +9,7 @@ function App() {
     useEffect(() => {
       // https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=awlI2QgBkvZtjasfaTqkmYUtoyGU6vfQLcsgQVmH
       axios.get('https://api.nasa.gov/planetary/apod?api_key=awlI2QgBkvZtjasfaTqkmYUtoyGU6vfQLcsgQVmH')
+      // axios.get('https://api.nasa.gov/planetary/apod?api_key=awlI2QgBkvZtjasfaTqkmYUtoyGU6vfQLcsgQVmH&date=2019-07-17')
       // axios.get('https://api.nasa.gov/planetary/apod?api_key=awlI2QgBkvZtjasfaTqkmYUtoyGU6vfQLcsgQVmH&date=2012-03-14')
       // https://epic.gsfc.nasa.gov/api/enhanced/date/2015-10-31
       // axios.get('https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=awlI2QgBkvZtjasfaTqkmYUtoyGU6vfQLcsgQVmH')
