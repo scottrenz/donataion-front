@@ -31,8 +31,8 @@ function App() {
     const hStyle ={
     justifyContent: 'center',
     margin: '100px',
+    } 
 
-    }
   return (
     <div className="container">
       <div className='top' style={style}>
