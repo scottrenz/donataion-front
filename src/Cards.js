@@ -28,12 +28,25 @@ const Expl = styled.div`
   width: 50%;
 `;
 
+const Blink = styled.a`
+
+  animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #000;    }
+  49%{    color: transparent; }
+  50%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: #000;    }
+
+`;
+
 export default props => {
 
-  let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<a href={props.url}>VIDEO</a>);
+  let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<Blink href={props.url}>VIDEO</Blink>);
   return (
 <Div >
-    <Date className='display'>Nasa Image day: {props.date}</Date>
+    <Date className='display'>Nasa Image Day: {props.date}</Date>
     {cHtml}
     <Expl className='display'>{props.expl}</Expl>
 
