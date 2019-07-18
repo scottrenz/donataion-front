@@ -8,7 +8,13 @@ export default props => {
     justifyContent: 'space-around',
   }
 
-  let cHtml= props.src ? (<img alt='photo' src={props.src} />) : (<a href={props.url}>VIDEO</a>);
+  const iStyle = {
+    display: 'flex',
+    width: '50%',
+
+  }
+
+  let cHtml= props.src ? (<img alt='photo' src={props.src} style={iStyle}/>) : (<a href={props.url}>VIDEO</a>);
   return (
 <div style={cStyle}>
     <div className='display'>{props.date}</div>
