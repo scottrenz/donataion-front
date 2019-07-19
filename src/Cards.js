@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Div = styled.div`
 
-  display: flex;
+  display: block;
   margin: 100px;
   flexDiretion: column;
   justifyContent: space-around;
@@ -41,12 +41,26 @@ const Blink = styled.a`
 
 `;
 
+export const Style = styled.div`
+
+display: flex;
+marginTop: 10px;
+
+`;
+
+export const H1Style = styled.h1`
+
+justifyContent: center;
+margin: 100px;
+
+`;
+
 export default props => {
 
   let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<Blink href={props.url}>VIDEO</Blink>);
   return (
 <Div >
-    <Date className='display'>Nasa Image Day: {props.date}</Date>
+    <Date className='display'>Nasa Image Day<br></br> {props.date}</Date>
     {cHtml}
     <Expl className='display'>{props.expl}</Expl>
 

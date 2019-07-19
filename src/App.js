@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react"
 import Cards from './Cards'
+import {Style, H1Style} from './Cards'
 import Logo from './Logo'
 import axios from 'axios'
+import { tsPropertySignature } from "@babel/types";
 
 function App() {
   const [imgData, setData] = useState(0)
+  const [datData, setDat] = useState(0)
   
+// //   function getDate(param){
+// // return props.date
+//   }
+
     useEffect(() => {
       // https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=awlI2QgBkvZtjasfaTqkmYUtoyGU6vfQLcsgQVmH
       axios.get('https://api.nasa.gov/planetary/apod?api_key=awlI2QgBkvZtjasfaTqkmYUtoyGU6vfQLcsgQVmH')
@@ -25,22 +32,14 @@ function App() {
               }
                )
               }, []);
-    const style ={
-      display: 'flex',
-      marginTop: '10px',
-    }
-    const hStyle ={
-    justifyContent: 'center',
-    margin: '100px',
-    } 
 
   return (
     <div className="container">
-      <div className='top' style={style}>
+      <Style className='top' >
         <Logo />
-      </div>
+      </Style>
       <div className="App" >
-        <h1 style={hStyle}>NASA Image of the Day</h1>
+        <H1Style>NASA Image of the Day</H1Style>
         <Cards date={imgData.date} expl={imgData.explanation} src={imgData.hdurl} url={imgData.url}/>
       </div>
     </div>
