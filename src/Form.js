@@ -21,7 +21,7 @@ window.location.assign('?date=' + values.date)
               <div className="field">
                 <label className="label">NASA Image Day</label>
                 <div className="control">
-                <input className="input" type="date" name="date" onChange={handleChange} value={values.date}  max={today} required />
+                <input className="input" type="date" name="date" onChange={handleChange} value={values.date}  max={today} min='1995-06-20' required />
                 </div>
               </div>
               <button type="submit" className="button is-block is-info is-fullwidth">Submit</button>
