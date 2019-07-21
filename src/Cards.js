@@ -1,6 +1,12 @@
 import React from "react"
 import styled from 'styled-components'
 
+  
+
+// import { Grid, Form, Input, TextArea, Button, Select } from "semantic-ui-react";
+// import "semantic-ui/dist/semantic.min.css";
+
+
 const Div = styled.div`
 
   display: block;
@@ -38,7 +44,9 @@ const Blink = styled.a`
   50%{    color: transparent; }
   99%{    color:transparent;  }
   100%{   color: #000;    }
-
+  ::selection {
+  color: #000;
+  }
 `;
 
 export const Style = styled.div`
@@ -54,13 +62,14 @@ justifyContent: center;
 margin: 100px;
 
 `;
+// const Form = styled.form;
 
 export default props => {
 
   let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<Blink href={props.url}>VIDEO</Blink>);
   return (
 <Div >
-    <Date className='display'>Nasa Image Day<br></br> {props.date}</Date>
+<Date >NASA Image Day {props.date} </Date>
     {cHtml}
     <Expl className='display'>{props.expl}</Expl>
 

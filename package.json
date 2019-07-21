@@ -1,4 +1,5 @@
 {
+  "homepage" : "http://scottrenz.github.io/NASAimageDay",
   "name": "nasa-apod",
   "version": "0.1.0",
   "private": true,
