@@ -66,7 +66,7 @@ margin: 100px;
 
 export default props => {
 
-  let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<Blink href={props.url}>VIDEO</Blink>);
+  let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<Blink href={props.url}>VIDEO click to see video</Blink>);
   return (
 <Div >
 <Date >NASA Image Day {props.date} </Date>
