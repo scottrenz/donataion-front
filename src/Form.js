@@ -12,7 +12,7 @@ window.location.assign('?date=' + values.date)
   }
 
     return (
-    <div className="section is-fullheight">
+    <div style={{marginLeft: '10%'}} className="section is-fullheight">
       <div className="container">
         <div className="column is-4 is-offset-4">
           <div className="box">
