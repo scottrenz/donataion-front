@@ -63,15 +63,22 @@ margin: 100px;
 
 `;
 // const Form = styled.form;
-
+function showdata (item,ix,arr) {
+return (
+<div>
+  <div>arr[ix].id</div>
+  <div>arr[ix].username</div>
+  <div>arr[ix].password</div>
+  </div>
+)
+}
 export default props => {
 
-  let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<Blink href={props.url}>VIDEO click to see video</Blink>);
+  // let cHtml= props.src ? (<Img alt='photo' src={props.src} />) : (<Blink href={props.url}>VIDEO click to see video</Blink>);
   return (
 <Div >
-<Date >NASA Image Day {props.date} </Date>
-    {cHtml}
-    <Expl className='display'>{props.expl}</Expl>
+{props.data.map(showdata)}
+    <Expl className='display'>{props.data}</Expl>
 
 </Div>
   )   

@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://scottrenz.github.io/NASAimageDay",
+  "homepage": "https://scottrenz.github.io/nasa-photo-of-the-day",
   "name": "nasa-apod",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,8 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build --git git",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
